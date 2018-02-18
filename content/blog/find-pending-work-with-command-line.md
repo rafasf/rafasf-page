@@ -5,16 +5,10 @@ title = "Find Pending Work with Command Line"
 
 +++
 
-Recently I came across a bit of manual work for provisioning new instances in AWS, given a few constrains like:
+Recently I came across a bit of manual work for provisioning new instances in AWS. Given the set of contrainst it end-up being an interesting journey with the company of command line utilities.
 
-* No permission to create new instances
-* No permission to control the load balancer
-
-Since it was necessary to rely on another person to create the instances and send the IP address over I accumulated a number of address which mapped to specific applications and environments.
-
-The first instances had scripts executed against them as soon as I got hold of it since I was eager to test out the changes, as more instances were being created there was a need to keep track of which one needed to be worked and which one was already done.
-
-That's when I end-up with a list of servers available:
+The information available was a bunch of instance IPs and names, which correlates to specific applications and
+environments. With a little bit of mapping this was the result:
 
 ```
 10.0.0.1 development app-one
@@ -25,7 +19,10 @@ That's when I end-up with a list of servers available:
 10.0.0.12 uat app-three
 ```
 
-And a list of servers that have been worked already:
+This list grew as new instances were being createad, since all the current instances would be replaced with new ones.
+
+In order to keep track of which instances were already provisioned, in the script that trigger the provisioning there
+was a line to append to a file which instance was provisioned, the output looks like this:
 
 ```
 [2017-05-10:11:02:56] 10.0.0.1 development app-one

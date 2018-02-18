@@ -1,12 +1,12 @@
-baseURL = "https://rafasf.github.io"
+baseURL = "https://rafasf.com"
 languageCode = "en-us"
 title = "Notes and Thoughts"
-theme = "cocoa"
+theme = "cactus-plus"
 
 author = "Rafael Ferreira"
 pygmentsuseclasses = true
 
-publishDir = "docs/"
+#publishDir = "docs/"
 
 [params]
 author = "Rafael Ferreira"
@@ -15,5 +15,5 @@ github = "//github.com/rafasf"
 linkedin = "//linkedin.com/in/rafaelsf/"
 twitter = "//twitter.com/techzin"
 hightlightjs = true
-noshowreadtime = false
+noshowreadtime = true
 gravatar = "ed42dd1e94bd5f1f08f0981c5c047d6f"
