@@ -15,8 +15,8 @@ jobs:
           paths:
             - ./public
   deploy:
-    machine:
-      enabled: true
+    docker:
+      - image: circleci/classic:latest
     working_directory: ~/rafasfpage
     steps:
       - restore_cache:
