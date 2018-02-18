@@ -13,5 +13,5 @@ jobs:
           command: htmlproofer ./public --allow-hash-href --check-html --empty-alt-ignore --disable-external
       - run:
           name: Deploy
-          commands:
+          command:
             - aws s3 sync ./public s3://rafasf.com/ --delete
