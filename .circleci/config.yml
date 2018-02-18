@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:0.28
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: HUGO_ENV=production hugo -v
+      - run:
+          name: Test
+          command: htmlproofer ./public --allow-hash-href --check-html --empty-alt-ignore --disable-external
+      - run:
+          name: Deploy
+          commands:
+            - aws s3 sync ./public s3://rafasf.com/ --delete
