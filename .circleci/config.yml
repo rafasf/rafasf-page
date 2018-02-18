@@ -12,7 +12,8 @@ jobs:
           command: HUGO_ENV=production hugo -v
       - save_cache:
           key: assets-{{ .Environment.CIRCLE_SHA1 }}
-          path: ~/rafasfpage/public
+          paths:
+            - ~/rafasfpage/public
   deploy:
     machine:
       enabled: true
