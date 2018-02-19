@@ -1,4 +1,4 @@
-baseURL = "https://rafasf.com"
+baseURL = "https://rafasf.com/"
 languageCode = "en-us"
 title = "Notes and Thoughts"
 theme = "cactus-plus"
