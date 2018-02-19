@@ -23,7 +23,7 @@ jobs:
           at: ~/page
       - run:
           name: Deploy
-          command: aws s3 sync ./public s3://rafasf.com/ --delete
+          command: aws s3 sync ./public s3://rafasf.com/ --delete --acl public-read
 
 workflows:
   version: 2
