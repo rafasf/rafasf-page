@@ -6,14 +6,18 @@ theme = "cactus-plus"
 author = "Rafael Ferreira"
 pygmentsuseclasses = true
 
-#publishDir = "docs/"
-
 [params]
 author = "Rafael Ferreira"
 description = "collection of notes and possibly some thoughts"
+
+gravatar = "ed42dd1e94bd5f1f08f0981c5c047d6f"
+
+hightlightjs = true
+noshowreadtime = true
+
+iconFont = "mono-social"
+
+[social]
 github = "//github.com/rafasf"
 linkedin = "//linkedin.com/in/rafaelsf/"
 twitter = "//twitter.com/techzin"
-hightlightjs = true
-noshowreadtime = true
-gravatar = "ed42dd1e94bd5f1f08f0981c5c047d6f"
