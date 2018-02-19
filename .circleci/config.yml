@@ -17,7 +17,7 @@ jobs:
     machine: true
     steps:
       - restore_cache:
-          key: assets-{{ .Environment.CIRCLE_SHA1 }}
+          key: v1-assets-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Deploy
           command: aws s3 sync ./public s3://rafasf.com/ --delete
