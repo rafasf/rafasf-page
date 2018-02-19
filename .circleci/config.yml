@@ -4,8 +4,11 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:0.28
+    working_directory: ~/page
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/page
       - run:
           name: Build
           command: HUGO_ENV=production hugo -v
@@ -15,7 +18,10 @@ jobs:
             - public
   deploy:
     machine: true
+    working_directory: ~/page
     steps:
+      - attach_workspace:
+          at: ~/page
       - restore_cache:
           key: v1-assets-{{ .Environment.CIRCLE_SHA1 }}
       - run:
