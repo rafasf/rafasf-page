@@ -2,6 +2,7 @@
 date = "2017-05-12T16:33:12-04:00"
 draft = false
 title = "Find Pending Work with Command Line"
+tags = ["command-line", "fun", "code"]
 
 +++
 
