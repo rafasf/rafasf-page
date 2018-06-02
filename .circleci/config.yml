@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:0.28
+      - image: cibuilds/hugo:latest
     working_directory: ~/page
     steps:
       - checkout
