@@ -2,7 +2,7 @@
 title = "Using Either to Handle Errors"
 date = 2018-06-01T20:16:09-05:00
 tags = [""]
-categories = [""]
+categories = ["code", "spring", "rest-template"]
 draft = false
 +++
 
