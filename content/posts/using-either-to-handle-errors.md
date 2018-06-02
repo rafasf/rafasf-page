@@ -138,7 +138,7 @@ allows us to provide two mappers, one for the _left_ side (`#toProperError`) and
 another to the _right_ side (`#ok`). It will check which of the values is
 present, apply the mapper and then return it.
 
-So, if the call was successful, it will apply `ok` to the **list of products**,
+So, if the call was successful, it will apply `#ok` to the **list of products**,
 exposing such list to our consumers and, if the request is unsuccessful, it will
 **create a proper error** and return a `Bad Gateway` with a description of what happened.
 
