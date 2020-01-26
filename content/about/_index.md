@@ -8,7 +8,7 @@ Software developer and craftsman with a passion for coffee, travel and fitness.
 
 Working with a variety of technologies as a ThoughtWorks consultant. I love learning new things, applying and sharing my experience to deliver amazing products as well as building teams.
 
-Find more specific information on the social links below. Also, find pictures of some of my trips [here](https://www.flickr.com/photos/techzin/albums).
+Find more specific information on the social links below.
 
 If you want to contact me and prefer a secure communication, [here](https://keybase.io/rafasf) is my public key.
 
