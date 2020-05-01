@@ -1,0 +1,6 @@
+baseURL = "https://rafasf.com/"
+languageCode = "en-us"
+title = "Rafael Ferreira"
+theme = "hugo-coder"
+
+canonifyurls = true

@@ -1,0 +1,62 @@
+author = "Rafael Ferreira"
+
+hightlightjs = true
+noshowreadtime = true
+
+iconFont = "mono-social"
+
+keywords = "developer,personal"
+gravatar = "rafa@rafasf.com"
+dateformat = "January 2, 2006"
+
+hideFooter = false
+hideCredits = false
+hideCopyright = false
+since = 2009
+
+# Git Commit in Footer, uncomment the line below to enable it.
+commit = "https://github.com/luizdepra/hugo-coder/tree/"
+
+rtl = false
+
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorscheme = "auto"
+
+# Series see also post count
+maxSeeAlsoItems = 5
+
+# Custom CSS
+custom_css = []
+
+# Custom JS
+custom_js = []
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/rafasf/"
+[[social]]
+    name = "Gitlab"
+    icon = "fab fa-gitlab"
+    weight = 2
+    url = "https://gitlab.com/rafasf/"
+[[social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    weight = 3
+    url = "https://twitter.com/techzin/"
+[[social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 4
+    url = "https://www.linkedin.com/in/rafaelsf/"

@@ -1,0 +1,13 @@
+[en]
+  languageName = "English"
+  weight = 1
+  contentdir = "content/"
+  info = "Technology enthusiast"
+  description = "Thought catalog"
+
+[pt-br]
+  languageName = "Português"
+  weight = 2
+  contentdir = "content/pt-br"
+  info = "Entusiasta da tecnologia"
+  description = "Catálogo de pensamento"
