@@ -1,0 +1,5 @@
+fileignoreconfig:
+- filename: themes/hugo-coder
+  checksum: d3bfcb6011aabe4d0806b225261f7dcf3f5a58b6e4da8387c3b2e6b8a8eacfa3
+  ignore_detectors: []
+scopeconfig: []
