@@ -13,4 +13,6 @@ products as well as building teams.
 If you want to contact me and prefer a secure communication,
 [here](https://keybase.io/rafasf) is my public key.
 
-![](about.png) _art by [Jessica](//jessmann.io)_
+![](/images/about.png)
+
+_art by [Jessica](//jessmann.io)_
