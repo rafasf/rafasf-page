@@ -9,6 +9,6 @@ weight = 2
 url = "posts/"
 
 [[main]]
-name = "Projects"
+name = "Resources"
 weight = 3
-url = "projects/"
+url = "resources/"
