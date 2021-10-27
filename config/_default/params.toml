@@ -41,21 +41,21 @@ tag = "tags"
 
 [[social]]
 name = "Github"
-icon = "fab fa-github"
+icon = "fa fa-github"
 weight = 1
 url = "https://github.com/rafasf/"
 [[social]]
 name = "Gitlab"
-icon = "fab fa-gitlab"
+icon = "fa fa-gitlab"
 weight = 2
 url = "https://gitlab.com/rafasf/"
 [[social]]
 name = "Twitter"
-icon = "fab fa-twitter"
+icon = "fa fa-twitter"
 weight = 3
 url = "https://twitter.com/techzin/"
 [[social]]
 name = "LinkedIn"
-icon = "fab fa-linkedin"
+icon = "fa fa-linkedin"
 weight = 4
 url = "https://www.linkedin.com/in/rafaelsf/"
