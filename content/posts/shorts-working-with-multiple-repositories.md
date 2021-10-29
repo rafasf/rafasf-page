@@ -46,7 +46,8 @@ $ gr tag discover
 ```
 
 Then I tag each of the repositories in a way that helps my current workflow,
-mostly by product and was able to make my morning routine much nicer.
+mostly by product. My morning routine got much nicer after I got this
+configured.
 
 On top of that, another thing I like to do is to check what changed since the
 previous day and to do that with [`gr`][gr] I only need one command:
