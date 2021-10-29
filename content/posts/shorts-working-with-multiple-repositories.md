@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2021-10-27T15:25:29-05:00
 title = "Shorts: Working with multiple repositories"
 description = "Reducing the friction of working with multiple repositories"
