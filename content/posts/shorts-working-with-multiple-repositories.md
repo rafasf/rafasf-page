@@ -49,7 +49,7 @@ Then I tag each of the repositories in a way that helps my current workflow,
 mostly by product and was able to make my morning routine much nicer.
 
 On top of that, another thing I like to do is to check what changed since the
-previous day and to do that with `gr` I only need one command:
+previous day and to do that with [`gr`][gr] I only need one command:
 
 ```bash
 $ gr git log --oneline --since=yesterday
@@ -61,6 +61,32 @@ And if I am more interested for a subset of the repositories, I would do:
 $ gr @product1 git log --oneline --since=yesterday
 ```
 
+## Applying changes
+
+[`comby`][comby] is another good tool to make the same change in multiple
+places. I mostly used to keep many of the applications healthy, for example, in
+the latest good version of a image or library.
+
+A destructive example could be replacing the base image:
+
+```bash
+$ comby -in-place 'FROM :[1]' 'FROM another/image:1010' **/Dockerfile
+```
+
+Assuming this change was successfull, I can use [`gr`][gr] to commit and push
+the changes.
+
+```bash
+$ gr git commit -m "Change base image to another/image:1010" -m "type: health"
+$ gr git push
+```
+
+{{< notice info >}}
+And yes, you should check if the build is green and pull the latest before
+actually pushing the change, here I have an over simplified workflow
+:slightly_smiling_face:.
+{{< /notice >}}
+
 ## Other tools
 
 - https://github.com/nosarthur/gita
@@ -71,3 +97,4 @@ _and many more..._
 
 
 [gr]: https://github.com/mixu/gr
+[comby]: https://comby.dev
