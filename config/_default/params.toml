@@ -50,12 +50,18 @@ icon = "fa fa-gitlab"
 weight = 2
 url = "https://gitlab.com/rafasf/"
 [[social]]
+name = "Mastodon"
+icon = "fa fa-mastodon"
+weight = 3
+url = "https://mastodon.social/@rafasf"
+rel = "me"
+[[social]]
 name = "Twitter"
 icon = "fa fa-twitter"
-weight = 3
+weight = 4
 url = "https://twitter.com/techzin/"
 [[social]]
 name = "LinkedIn"
 icon = "fa fa-linkedin"
-weight = 4
+weight = 5
 url = "https://www.linkedin.com/in/rafaelsf/"
