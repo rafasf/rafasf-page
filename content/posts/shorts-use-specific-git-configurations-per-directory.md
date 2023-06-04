@@ -30,9 +30,9 @@ for all of them.
 > Besides it is a potential security risk, since you can expose personal or work
 > or client related information to parties that should not know about it.
 
-`includeIf` can help quite a bit with this problem. Assume you have three
-"project categories": **Personal**, **Internal work**, **Main product** and you
-organize them in the same way:
+[`includeIf`][git-includeif] can help quite a bit with this problem. Assume you
+have three "project categories": **Personal**, **Internal work**, **Main
+product** and you organize them in the same way:
 
 ```bash
 projects/
@@ -41,24 +41,35 @@ projects/
 ├─ main-product/
 ```
 
-Assuming `main-product` requires a different author email, create the following:
+Assuming `main-product` requires a different author email, create a
+configuration file with especific configuration for `main-product`.
+
+In the example below, I set the email and which SSH key to use for repositories
+under `~/projects/main-product`.
 
 ```ini
-# projects/main-product/gitconfig
+# File location: projects/main-product/gitconfig
 
 [user]
   email = bob@main-product.com
+
+[core]
+  sshCommand = "ssh -i ~/.ssh/id_main_product"
 ```
 
-Then update Git's global configuration with:
+Then I add a reference to that file in the main configuration so Git knows which
+file to use to override my defaults based on the directory I'm running `git`.
 
 ```ini
-# ~/.config/git/config or ~/.gitconfig
+# File location: ~/.config/git/config or ~/.gitconfig
 
 # ... file content ...
 
 [includeIf "gitdir:~/projects/main-product/"]
   path = "~/projects/main-product/gitconfig"
+
+[includeIf "gitdir:~/projects/internal/"]
+  path = "~/projects/internal/gitconfig"
 ```
 
 {{< notice warning >}}
@@ -66,9 +77,9 @@ Do not forget the trailing **`/`** in `gitdir` so it applies for all the
 directories under that path.
 {{< /notice >}}
 
-
 {{< notice info >}}
 You can adust any Git configuration with this pattern. The customization is not
-limited to the author information. 
+limited to the author information.
 {{< /notice >}}
 
+[git-includeif]: https://git-scm.com/docs/git-config#_includes
