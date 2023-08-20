@@ -56,12 +56,7 @@ weight = 3
 url = "https://mastodon.social/@rafasf"
 rel = "me"
 [[social]]
-name = "Twitter"
-icon = "fa fa-twitter"
-weight = 4
-url = "https://twitter.com/techzin/"
-[[social]]
 name = "LinkedIn"
 icon = "fa fa-linkedin"
-weight = 5
+weight = 4
 url = "https://www.linkedin.com/in/rafaelsf/"
