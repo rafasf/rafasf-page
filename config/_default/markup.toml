@@ -1,5 +1,4 @@
 # Default: https://gohugo.io/getting-started/configuration-markup
 
 [highlight]
-style = "solarized-light"
 tabWidth = 2
