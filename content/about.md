@@ -4,14 +4,10 @@ date = 2018-02-18T18:59:38-06:00
 hidden = true
 +++
 
-Software developer and craftsman with a passion for coffee, travel and fitness.
-
-Working with a variety of technologies as a ThoughtWorks consultant. I love
-learning new things, applying and sharing my experience to deliver amazing
-products as well as building teams.
-
-If you want to contact me and prefer a secure communication,
-[here](https://keybase.io/rafasf) is my public key.
+I am dedicated to seamlessly integrating product, business, and technology to
+create valuable digital solutions that effectively address problems while
+delivering exceptional user experiences. My enthusiasm extends beyond the
+professional realm to include a strong passion for coffee, travel, and fitness.
 
 ![](/images/about.png)
 
