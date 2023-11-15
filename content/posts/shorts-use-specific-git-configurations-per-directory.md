@@ -8,14 +8,14 @@ categories = ["second-brain"]
 series = []
 +++
 
-> Ah! I pushed some code using my personal email!
+> Ah! I pushed some work code using my personal information!
 
 Using the same computer for collaborating in different projects will likely
 require slightly different configurations for some of them. For version control
 systems (e.g. Git) the most common is the author information.
 
-The author information is the first thing I configure and I do it at the global
-level, which lives in `~/.config/git/config` (or `~/.gitconfig`).
+The author information is the first thing to configure at the global level,
+which lives in `~/.config/git/config` (or `~/.gitconfig`).
 
 ```ini
 [user]
@@ -23,32 +23,30 @@ level, which lives in `~/.config/git/config` (or `~/.gitconfig`).
   email = bob@example.org
 ```
 
-That information is used for **every** `git` command you execute. It is a great
-default, but if you have multiple projects that information might not be true
-for all of them.
+This is used for **every** `git` command you execute. It's a great default, but
+if you have multiple projects that information might not be true for all of
+them.
 
-> Besides it is a potential security risk, since you can expose personal or work
-> or client related information to parties that should not know about it.
+[`includeIf`][git-includeif] helps with that.
 
-[`includeIf`][git-includeif] can help quite a bit with this problem. Assume you
-have three "project categories": **Personal**, **Internal work**, **Main
-product** and you organize them in the same way:
+Assume you have three "project categories": **Personal**, **Internal work**,
+**Client One** and you organize them in the same way:
 
 ```bash
 projects/
 ├─ personal/
 ├─ internal/
-├─ main-product/
+├─ client-one/
 ```
 
-Assuming `main-product` requires a different author email, create a
-configuration file with especific configuration for `main-product`.
+Here `client-one` requires a different author email, create a
+configuration file with especific configuration for `client-one`.
 
 In the example below, I set the email and which SSH key to use for repositories
-under `~/projects/main-product`.
+under `~/projects/client-one`.
 
 ```ini
-# File location: projects/main-product/gitconfig
+# File location: projects/client-one/gitconfig
 
 [user]
   email = bob@main-product.com
@@ -65,8 +63,8 @@ file to use to override my defaults based on the directory I'm running `git`.
 
 # ... file content ...
 
-[includeIf "gitdir:~/projects/main-product/"]
-  path = "~/projects/main-product/gitconfig"
+[includeIf "gitdir:~/projects/client-one/"]
+  path = "~/projects/client-one/gitconfig"
 
 [includeIf "gitdir:~/projects/internal/"]
   path = "~/projects/internal/gitconfig"

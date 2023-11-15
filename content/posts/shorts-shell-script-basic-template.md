@@ -10,9 +10,10 @@ externalLink = ""
 series = []
 +++
 
-Writting a shell script to _"solve a problem"_ for me still the default, but it
-does not happen everyday and I end-up forgetting some of the basics to include
-to help me out and reduce the risk of weird behaviours.
+Writting a shell script to _"solve a quick problem"_ still the default for me.
+Since it doesn't happen everyday I tend to forget some of the good defaults.
+
+To help with that, I've captured those below:
 
 ## tl;dr
 
