@@ -8,14 +8,17 @@ categories = ["second-brain"]
 series = []
 +++
 
-> Ah! I pushed some work code using my personal information!
+> Ah! My commit has the wrong author name and email!!
 
-Using the same computer for collaborating in different projects will likely
-require slightly different configurations for some of them. For version control
-systems (e.g. Git) the most common is the author information.
+Using the same computer for different projects that need different identities or
+settings can sometimes accidentally leak unwanted information, not reconise you
+in the system, etc.
 
-The author information is the first thing to configure at the global level,
-which lives in `~/.config/git/config` (or `~/.gitconfig`).
+The good news is that Git makes it easy to manage configurations at a folder
+level, here you'll find a way to tailor the configuration to your need.
+
+A typical setup has the author information configured at the global level, which
+lives in `~/.config/git/config` (or `~/.gitconfig`), for example:
 
 ```ini
 [user]
@@ -23,14 +26,15 @@ which lives in `~/.config/git/config` (or `~/.gitconfig`).
   email = bob@example.org
 ```
 
-This is used for **every** `git` command you execute. It's a great default, but
-if you have multiple projects that information might not be true for all of
-them.
+This is used for **every** `git` command you execute, but that's not quite what
+you want. You want to control that at the folder level and to do that you'll use
+[`includeIf`][git-includeif].
 
-[`includeIf`][git-includeif] helps with that.
+Let's go through an example:
 
-Assume you have three "project categories": **Personal**, **Internal work**,
-**Client One** and you organize them in the same way:
+Assume you have three project categories, **Personal**, **Internal work** and
+**Client One**, where each of them require a different `author email` and `SSH
+key`.
 
 ```bash
 projects/
@@ -39,36 +43,41 @@ projects/
 ├─ client-one/
 ```
 
-Here `client-one` requires a different author email, create a
-configuration file with especific configuration for `client-one`.
+With that, create a `gitconfig` inside of each of these folders with the values
+you'd like to overwrite.
 
-In the example below, I set the email and which SSH key to use for repositories
-under `~/projects/client-one`.
+Here is an example for **Client One**:
 
 ```ini
 # File location: projects/client-one/gitconfig
 
 [user]
-  email = bob@main-product.com
+  email = bob@client-one.com
 
 [core]
-  sshCommand = "ssh -i ~/.ssh/id_main_product"
+  sshCommand = "ssh -i ~/.ssh/id_client_one"
 ```
 
-Then I add a reference to that file in the main configuration so Git knows which
-file to use to override my defaults based on the directory I'm running `git`.
+After creating all the specific configuration files, go to your global Git
+configuration and add the following:
 
 ```ini
 # File location: ~/.config/git/config or ~/.gitconfig
 
 # ... file content ...
 
-[includeIf "gitdir:~/projects/client-one/"]
-  path = "~/projects/client-one/gitconfig"
+[includeIf "gitdir:~/projects/personal/"]
+  path = "~/projects/personal/gitconfig"
 
 [includeIf "gitdir:~/projects/internal/"]
   path = "~/projects/internal/gitconfig"
+
+[includeIf "gitdir:~/projects/client-one/"]
+  path = "~/projects/client-one/gitconfig"
 ```
+
+From now on, Git will use the values you added in the more specific file instead
+of the global one.
 
 {{< notice warning >}}
 Do not forget the trailing **`/`** in `gitdir` so it applies for all the
