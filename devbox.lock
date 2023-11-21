@@ -1,0 +1,23 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "go@1.21.4": {
+      "last_modified": "2023-11-19T17:46:56Z",
+      "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#go",
+      "source": "devbox-search",
+      "version": "1.21.4"
+    },
+    "hugo@0.120.3": {
+      "last_modified": "2023-11-19T17:46:56Z",
+      "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#hugo",
+      "source": "devbox-search",
+      "version": "0.120.3"
+    },
+    "nodejs@21.2.0": {
+      "last_modified": "2023-11-19T17:46:56Z",
+      "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#nodejs_21",
+      "source": "devbox-search",
+      "version": "21.2.0"
+    }
+  }
+}
