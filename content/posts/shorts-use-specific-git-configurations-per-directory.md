@@ -4,8 +4,6 @@ date = 2021-11-03T20:50:51-05:00
 title = "Shorts: Use specific Git configuration per directory"
 description = "Different repositories might require different configuration"
 tags = ["shorts", "git", "security"]
-categories = ["second-brain"]
-series = []
 +++
 
 > Ah! My commit has the wrong author name and email!!
@@ -84,7 +82,9 @@ Do not forget the trailing **`/`** in `gitdir` so it applies for all the
 directories under that path.
 {{< /notice >}}
 
-{{< notice info >}}
+{{< notice tip >}}
+Also, don't forget:
+
 You can adust any Git configuration with this pattern. The customization is not
 limited to the author information.
 {{< /notice >}}

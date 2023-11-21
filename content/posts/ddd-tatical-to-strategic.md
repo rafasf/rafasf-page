@@ -2,7 +2,6 @@
 title = "DDD Tatical to Strategic"
 date = 2018-07-22T17:04:29-05:00
 tags = ["ddd", "experience", "practices"]
-categories = [""]
 draft = true
 +++
 
@@ -42,4 +41,3 @@ aspects of the product.
 The team was already excited about the product, and a few member had already
 created a skeleton application using an internal service generator (bringing all
 that good framework-basied structure).
-

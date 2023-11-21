@@ -4,8 +4,6 @@ date = 2021-10-27T15:25:29-05:00
 title = "Shorts: Working with multiple repositories"
 description = "Reducing the friction of working with multiple repositories"
 tags = ["shorts", "git"]
-categories = ["second-brain"]
-series = []
 +++
 
 ## The routine
@@ -82,11 +80,9 @@ $ gr git commit -m "Change base image to another/image:1010" -m "type: health"
 $ gr git push
 ```
 
-{{< notice info >}}
 And yes, you should check if the build is green and pull the latest before
 actually pushing the change, here I have an over simplified workflow
 :slightly_smiling_face:.
-{{< /notice >}}
 
 ## Other tools
 
@@ -95,7 +91,6 @@ actually pushing the change, here I have an over simplified workflow
 - https://github.com/isacikgoz/gitbatch
 
 _and many more..._
-
 
 [gr]: https://github.com/mixu/gr
 [comby]: https://comby.dev

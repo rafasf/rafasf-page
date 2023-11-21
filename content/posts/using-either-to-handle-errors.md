@@ -1,8 +1,7 @@
 +++
 title = "Using Either to Handle Errors"
 date = 2018-06-01T20:16:09-05:00
-tags = [""]
-categories = ["code", "spring", "rest-template"]
+tags = ["code", "spring", "rest-template"]
 draft = false
 +++
 
@@ -150,12 +149,11 @@ HTTP codes.
 To be able to leverage the power of either, I would recommend getting more
 familiar with the concept if you aren't already, here are some references:
 
-* [Starting with Haskell: Error Handling](https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/10_Error_Handling)
-* [Exploring Either in Kotlin](https://kotlin.link/articles/Exploring-an-Either-Monad-in-Kotlin.html)
+- [Starting with Haskell: Error Handling](https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/10_Error_Handling)
+- [Exploring Either in Kotlin](https://kotlin.link/articles/Exploring-an-Either-Monad-in-Kotlin.html)
 
 In this post, we are making use of a library called [vavr](http://www.vavr.io)
 which offers an implementation of [Either](http://www.vavr.io/vavr-docs/#_either)
 for Java.
 
 The source code of the post is [here](https://github.com/rafasf/using-either-resttemplate).
-

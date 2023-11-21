@@ -2,7 +2,6 @@
 title = "Keep Documentation Close to Code"
 date = 2020-01-26T11:18:38-06:00
 tags = ["documentation"]
-categories = [""]
 draft = true
 +++
 

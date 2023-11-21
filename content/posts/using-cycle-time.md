@@ -4,8 +4,6 @@ date = 2022-06-07T20:50:51-05:00
 title = "Using cycle time"
 description = ""
 tags = ["improvement", "delivery-flow"]
-categories = ["improvement"]
-series = []
 +++
 
 I find looking at the cycle time scatterplot one of the easiest ways to trigger

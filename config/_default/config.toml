@@ -1,8 +1,10 @@
 baseURL = "https://rafasf.com"
-languageCode = "en-us"
 title = "Rafael Ferreira"
+
+languageCode = "en"
+defaultContentLanguage = "en"
+
 theme = "hugo-coder"
 
 canonifyurls = true
-
 enableEmoji = true

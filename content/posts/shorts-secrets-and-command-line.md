@@ -2,7 +2,6 @@
 title = "Shorts: Secrets and the command line"
 date = 2018-12-17T11:30:25-05:00
 tags = ["command-line", "macos", "security", "shorts"]
-categories = ["second-brain"]
 draft = false
 +++
 

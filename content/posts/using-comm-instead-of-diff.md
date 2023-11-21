@@ -1,6 +1,6 @@
 +++
 date = "2017-05-12T16:33:12-04:00"
-draft = false
+draft = true
 title = "Using comm instead of diff"
 tags = ["command-line", "fun", "code"]
 

@@ -5,7 +5,7 @@ noshowreadtime = true
 
 iconFont = "mono-social"
 
-keywords = "developer,personal,resources"
+keywords = "technology,personal,resources"
 gravatar = "rafa@rafasf.com"
 dateformat = "January 2, 2006"
 
@@ -36,27 +36,26 @@ custom_css = []
 custom_js = []
 
 [taxonomies]
-series = "series"
 tag = "tags"
 
 [[social]]
 name = "Github"
-icon = "fa fa-github"
+icon = "fa fa-2x fa-github"
 weight = 1
 url = "https://github.com/rafasf/"
 [[social]]
 name = "Gitlab"
-icon = "fa fa-gitlab"
+icon = "fa fa-2x fa-gitlab"
 weight = 2
 url = "https://gitlab.com/rafasf/"
 [[social]]
 name = "Mastodon"
-icon = "fa fa-mastodon"
+icon = "fa fa-2x fa-mastodon"
 weight = 3
 url = "https://mastodon.social/@rafasf"
 rel = "me"
 [[social]]
 name = "LinkedIn"
-icon = "fa fa-linkedin"
+icon = "fa fa-2x fa-linkedin"
 weight = 4
 url = "https://www.linkedin.com/in/rafaelsf/"
