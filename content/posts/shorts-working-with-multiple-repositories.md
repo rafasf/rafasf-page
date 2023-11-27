@@ -6,7 +6,7 @@ description = "Reducing the friction of working with multiple repositories"
 tags = ["shorts", "git"]
 +++
 
-## The routine
+Have you experienced something the the flow below?
 
 ```bash
 $ cd projects
@@ -21,68 +21,67 @@ $ cd projects
 .
 ```
 
-This routine only gets worse as the number of applications grows, the time spent
-on it will also increase and your willingness to be up-to-date might actually go
-down.
+If you have, you know how painful and boring that gets. The good news is that
+[`mani`][mani] exists making the flow much better.
 
-It can be better though! :slightly_smiling_face: It can look like:
-
-```bash
-$ gr git pull [--rebase]
-```
-
-The tool [`gr`][gr] is one of many that helps people working with multiple
-repositories. Besides allowing the execution of commands across repositories,
-you can annotate each of them with one or more tags.
-
-Here is how I set it up:
+After configuring, the following will get you the same result:
 
 ```bash
-$ npm install -g git-run
-$ cd ~/projects
-$ gr tag discover
+$ mani run pull
 ```
 
-Then I tag each of the repositories in a way that helps my current workflow,
-mostly by product. My morning routine got much nicer after I got this
-configured.
+## The setup
 
-On top of that, another thing I like to do is to check what changed since the
-previous day and to do that with [`gr`][gr] I only need one command:
+### 1 Install
+
+Use your favourite package manager or [manually install][mani_manual_install].
 
 ```bash
-$ gr git log --oneline --since=yesterday
+$ brew install mani
 ```
 
-And if I am more interested for a subset of the repositories, I would do:
+### 2 Initialise
+
+Run the command below in the parent folder where your repositories reside. The
+tool will create an entry for each in a file named `mani.yml`.
 
 ```bash
-$ gr @product1 git log --oneline --since=yesterday
+$ mani init
 ```
 
-## Applying changes
+### 3 Create your tasks
 
-[`comby`][comby] is another good tool to make the same change in multiple
-places. I mostly used to keep many of the applications healthy, for example, in
-the latest good version of a image or library.
+Now that you have all the repositories in your `mani.yml` file, you can create
+the tasks to be executed across them.
 
-A destructive example could be replacing the base image:
+```yaml
+# ... repositories ...
 
-```bash
-$ comby -in-place 'FROM :[1]' 'FROM another/image:1010' **/Dockerfile
+tasks:
+  pull:
+    cmd: git pull --rebase
 ```
 
-Assuming this change was successfull, I can use [`gr`][gr] to commit and push
-the changes.
+This is a simple command, but the tool will allow you to be very creative on
+those.
 
-```bash
-$ gr git commit -m "Change base image to another/image:1010" -m "type: health"
-$ gr git push
-```
+### 4 Sharing
 
-And yes, you should check if the build is green and pull the latest before
-actually pushing the change, here I have an over simplified workflow
-:slightly_smiling_face:.
+In case you are changing computers, backup the `mani.yml` file, then in the new
+computer you can run `mani sync` to clone all the repositories from scratch.
+
+You can also share that file with collegues instead of telling them to clone
+five repositories.
+
+### 5 Being creative
+
+[Check the documentation][mani_docs] to learn more.
+
+A few of the things you can do:
+
+- Group repositories and have tasks targeted to specific groups
+- Visualise your repositories as a tree
+- Tweak the visual output
 
 ## Other tools
 
@@ -94,3 +93,6 @@ _and many more..._
 
 [gr]: https://github.com/mixu/gr
 [comby]: https://comby.dev
+[mani]: https://github.com/alajmo/mani
+[mani_manual_install]: https://github.com/alajmo/mani#installation
+[mani_docs]: https://manicli.com/examples
