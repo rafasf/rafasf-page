@@ -1,5 +1,9 @@
 {
-  "packages": ["go@1.21.4", "hugo@0.120.3", "nodejs@21.2.0"],
+  "packages": [
+    "go@1.21.4",
+    "nodejs@21.2.0",
+    "hugo@0.143.1"
+  ],
   "shell": {
     "init_hook": ["echo 'Welcome to devbox!' > /dev/null"],
     "scripts": {

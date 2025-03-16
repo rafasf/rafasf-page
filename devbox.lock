@@ -1,20 +1,66 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "resolved": "github:NixOS/nixpkgs/573c650e8a14b2faa0041645ab18aed7e60f0c9a?lastModified=1741865919&narHash=sha256-4thdbnP6dlbdq%2BqZWTsm4ffAwoS8Tiq1YResB%2BRP6WE%3D"
+    },
     "go@1.21.4": {
       "last_modified": "2023-11-19T17:46:56Z",
       "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#go",
       "source": "devbox-search",
       "version": "1.21.4"
     },
-    "hugo@0.120.3": {
-      "last_modified": "2023-11-19T17:46:56Z",
-      "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#hugo",
+    "hugo@0.143.1": {
+      "last_modified": "2025-02-16T21:44:05Z",
+      "resolved": "github:NixOS/nixpkgs/f0204ef4baa3b6317dee1c84ddeffbd293638836#hugo",
       "source": "devbox-search",
-      "version": "0.120.3"
+      "version": "0.143.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nidvk5irfwjgzcr7zi7i2y9i5q9rzjq6-hugo-0.143.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nidvk5irfwjgzcr7zi7i2y9i5q9rzjq6-hugo-0.143.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q094cdk8i81xrsajgn6717yaz48a89c2-hugo-0.143.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/q094cdk8i81xrsajgn6717yaz48a89c2-hugo-0.143.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hrhqr4a8z2489xdqw25kfbbz8k5rz429-hugo-0.143.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hrhqr4a8z2489xdqw25kfbbz8k5rz429-hugo-0.143.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3nc1dnnhyl5pw4amx3wyfcgiipwc20lk-hugo-0.143.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3nc1dnnhyl5pw4amx3wyfcgiipwc20lk-hugo-0.143.1"
+        }
+      }
     },
     "nodejs@21.2.0": {
       "last_modified": "2023-11-19T17:46:56Z",
+      "plugin_version": "0.0.2",
       "resolved": "github:NixOS/nixpkgs/0bf3f5cf6a98b5d077cdcdb00a6d4b3d92bc78b5#nodejs_21",
       "source": "devbox-search",
       "version": "21.2.0"
