@@ -1,5 +1,4 @@
 # Default: https://gohugo.io/getting-started/configuration-markup
 
 [highlight]
-tabWidth = 2
-noClasses = false
+style = "catppuccin-frappe"

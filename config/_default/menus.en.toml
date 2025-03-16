@@ -1,9 +1,0 @@
-[[main]]
-name = "Posts"
-weight = 1
-url = "posts/"
-
-[[main]]
-name = "External Resources"
-weight = 2
-url = "resources/"

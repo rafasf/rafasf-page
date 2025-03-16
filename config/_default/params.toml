@@ -1,11 +1,12 @@
 author = "Rafael Ferreira"
+description = "technology --"
 
 hightlightjs = true
 noshowreadtime = true
 
 iconFont = "mono-social"
 
-keywords = "technology,personal,resources"
+keywords = "technology,personal,resources,product,leadership"
 gravatar = "rafa@rafasf.com"
 dateformat = "January 2, 2006"
 
@@ -26,6 +27,8 @@ rtl = false
 # "light" (light background, dark foreground) (default)
 colorscheme = "auto"
 
+enableTwemoji = true
+
 # Series see also post count
 maxSeeAlsoItems = 5
 
@@ -39,23 +42,28 @@ custom_js = []
 tag = "tags"
 
 [[social]]
-name = "Github"
-icon = "fa fa-2x fa-github"
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin"
 weight = 1
+url = "https://www.linkedin.com/in/rafaelsf"
+[[social]]
+name = "Github"
+icon = "fa-brands fa-github"
+weight = 2
 url = "https://github.com/rafasf/"
 [[social]]
 name = "Gitlab"
-icon = "fa fa-2x fa-gitlab"
-weight = 2
+icon = "fa-brands fa-gitlab"
+weight = 3
 url = "https://gitlab.com/rafasf/"
 [[social]]
 name = "Mastodon"
-icon = "fa fa-2x fa-mastodon"
-weight = 3
+icon = "fa-brands fa-mastodon"
+weight = 4
 url = "https://mastodon.social/@rafasf"
 rel = "me"
 [[social]]
-name = "LinkedIn"
-icon = "fa fa-2x fa-linkedin"
-weight = 4
-url = "https://www.linkedin.com/in/rafaelsf/"
+name = "Bluesky"
+icon = "fa-brands fa-bluesky"
+weight = 5
+url = "https://bsky.app/profile/rafasf.bsky.social"
